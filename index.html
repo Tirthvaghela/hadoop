@@ -27,6 +27,8 @@
   --accent:#f2b200; --accent-strong:#f2b200; --on-accent:#231a00;
   --good:#5fc58a; --good-bg:#153424; --bad:#f08a6c; --bad-bg:#3a1f17; color-scheme:dark}
 *{box-sizing:border-box}
+[hidden],#nano[hidden],#nano-ask[hidden],section[hidden]{display:none!important}
+img{max-width:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55}
 .wrap{max-width:1240px;margin:0 auto;padding-inline:16px;padding-block:18px 56px}
 header.top{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end;justify-content:space-between}
@@ -97,13 +99,13 @@ pre.mini{margin:6px 0;background:var(--sunk);border:1px solid var(--line);border
 .keys .tbtn{flex:none;min-width:44px;padding:.35rem .6rem}
 @media (pointer:coarse),(max-width:700px){.keys{display:flex}}
 /* nano */
-#nano{position:absolute;inset:0;background:var(--term);display:flex;flex-direction:column;z-index:3;font-family:var(--f-mono)}
+#nano:not([hidden]){position:absolute;inset:0;background:var(--term);display:flex;flex-direction:column;z-index:3;font-family:var(--f-mono)}
 .nano-head{background:#d3d7cf;color:#000;display:flex;justify-content:space-between;padding:2px 10px;font:400 15px var(--f-mono);gap:10px}
 .nano-head span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #nano-ta{flex:1;width:100%;resize:none;background:var(--term);color:var(--term-ink);border:0;padding:8px 12px;font:400 15.5px/1.35 var(--f-mono);tab-size:4;outline:none;caret-color:#fff}
 #nano-status{text-align:center;color:#000;min-height:1.4em;font:400 14px var(--f-mono)}
 #nano-status:not(:empty){background:#d3d7cf;align-self:center;padding:0 8px;margin:2px 0}
-.nano-ask{background:#d3d7cf;color:#000;padding:2px 10px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font:400 15px var(--f-mono)}
+.nano-ask:not([hidden]){background:#d3d7cf;color:#000;padding:2px 10px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font:400 15px var(--f-mono)}
 .nano-keys{display:flex;flex-wrap:wrap;gap:4px 16px;padding:4px 10px 8px;color:var(--term-ink);font:400 14px var(--f-mono)}
 .nano-keys b{background:#d3d7cf;color:#000;padding:0 3px;font-weight:400}
 .nano-keys button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0}
